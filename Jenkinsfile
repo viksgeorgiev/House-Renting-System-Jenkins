@@ -6,9 +6,13 @@ pipeline{
             steps{
                 bat 'dotnet restore'
             }
+        }
+         stage("Build project"){
             steps{
                 bat 'dotnet build'
             }
+        }
+         stage("Test Project"){
             steps{
                 bat 'dotnet test'
             }
